@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Mazin Bureau for Geological Consulting and Studies</title>
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        .about-container {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+        .section-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .section-button {
+            background-color: #333; /* Dark Grey */
+            color: white; /* White text */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .section-button:hover,
+        .section-button.toggled {
+            background-color: #777; /* Lighter Grey */
+            color: black; /* Black text on hover/toggle */
+        }
+        .section-button.toggled {
+            font-weight: bold;
+        }
+        .section-content {
+            display: none;
+            padding: 15px;
+            text-align: justify;
+            direction: ltr;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .section-content.active {
+            display: block;
+        }
+        .arabic-content {
+            display: none;
+            padding: 15px;
+            text-align: justify;
+            direction: rtl;
+            font-family: 'Tajawal', 'Amiri', 'Arial', 'Tahoma', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            unicode-bidi: embed;
+        }
+        .arabic-content.active {
+            display: block;
+        }
+        .section-content h2,
+        .arabic-content h2 {
+            color: firebrick;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .section-content p,
+        .arabic-content p {
+            color: #555;
+            font-weight: bold;
+            text-align: justify;
+        }
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+        ul {
+            list-style-type: square;
+            text-align: left;
+            margin-left: 40px;
+        }
+        .doctor-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .doctor-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .doctor {
+            width: 180px;
+            margin: 0;
+            text-align: center;
+        }
+        .doctor img {
+            width: 100px;
+            height: 140px;
+            border-radius: 10px;
+            object-fit: cover;.doctor img {
+    object-fit: cover;
+}
+            margin-bottom: 5px;
+        }
+        .doctor p {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 0;
+            color: #555;
+        }
+       
+    </style>
+</head>
+<body>
+    <img src="https://i.postimg.cc/d1RQh0Sx/Screenshot-2025-03-31-143115.png" alt="Al-Mazin Bureau for Geological Consulting and Studies">
+    <h1>Al-Mazin Bureau for Geological Consulting and Studies</h1>
+
+    <div class="about-container">
+        <div class="section-buttons">
+            <button class="section-button" onclick="toggleSection('about', this)">About Us</button>
+            <button class="section-button" onclick="toggleSection('services', this)">Our Services</button>
+            <button class="section-button" onclick="toggleSection('contact', this)">Contact Us</button>
+        </div>
+
+        <div id="about" class="section-content">
+            <h2>About Us</h2>
+            <p>
+                Al-Mazin Bureau for Geological Studies and Consulting was established in (1998) and includes
+                a distinguished group of consultants in various fields of geology, many of whom have worked for years in relevant government departments and institutions.
+                The Bureau’s future vision goes beyond the traditional role of consulting firms, aiming to develop ambitious strategic plans to position Iraq in the place it rightfully deserves.
+            </p>
+        </div>
+
+        <div id="services" class="section-content">
+            <h1>Our Services</h1>
+           <img src="https://i.postimg.cc/JzCPRx4z/Screenshot-2025-04-01-234029.png" alt="Service">
+        </div>
+
+        <div id="contact" class="section-content">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>☎️ +964 773 670 0004 / +964 787 198 5019</li>
+                <li>📧 mazingroup64@gmail.com</li>
+                <li>📍 Al-Karadeh, Baghdad</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="about-container">
+        <div class="section-buttons">
+            <button class="section-button" onclick="toggleArabicSection('arabic-about', this)">من نحن</button>
+            <button class="section-button" onclick="toggleArabicSection('arabic-services', this)">خدماتنا</button>
+            <button class="section-button" onclick="toggleArabicSection('arabic-contact', this)">اتصل بنا</button>
+        </div>
+
+        <div id="arabic-about" class="arabic-content">
+            <h2>من نحن</h2>
+            <p>
+                تأسس مكتب المازن للدراسات والاستشارات الجيولوجية سنة 1998، ويضم المكتب نخبة من الاستشاريين في مجالات واسعة في علم الجيولوجيا،
+                ممن عملوا سنوات طوال لدى الدوائر والمؤسسات ذات العلاقة. إن الرؤية المستقبلية للمكتب تتجاوز الدور التقليدي للمكاتب الاستشارية،
+                وصولًا إلى وضع خطط مستقبلية طموحة لوضع العراق في ما يستحقه من مقام.
+            </p>
+        </div>
+
+        <div id="arabic-services" class="arabic-content">
+            <h2>خدماتنا</h2>
+          <img src="https://i.postimg.cc/JzCPRx4z/Screenshot-2025-04-01-234029.png" alt="Service">
+        </div>
+        <div id="arabic-contact" class="arabic-content">
+            <h2>اتصل بنا</h2>
+            <ul>
+                <li>☎️ +964 773 670 0004 / +964 787 198 5019</li>
+                <li>📧 mazingroup64@gmail.com</li>
+                <li>📍 الكرادة، بغداد</li>
+            </ul>
+        </div>
+    </div>
+<div class="doctor-section">
+        <h2>Our Experts</h2>
+        <div class="doctor-container">
+            <div class="doctor">
+                <img src="https://i.postimg.cc/vBybwsHL/Screenshot-2025-03-31-143150.png" alt="Dr. Mazin Al-Aboudi" >
+                <p>Dr. Mazin Al-Aboudi<br>PhD in Geophysical Exploration<br>Director of the Bureau</p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/SRTh9YLD/Screenshot-2025-03-31-143204.png" alt="Dr. Rafiq Zaner">
+                <p>Dr. Rafiq Zaner<br>PhD in Geochemistry and Environmental Sciences<br></p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/TY1G6QGS/Screenshot-2025-03-31-143217.png" alt="Dr. Jasim Mohammed Thabet">
+                <p>Dr. Jasim Mohammed Thabet<br>PhD in Electrical Surveying<br></p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/pVGbq88B/Screenshot-2025-03-31-143234.png" alt="Dr. Nasir Al-Musawi">
+                <p>Dr. Nasir Al-Musawi<br>PhD in Water Resources and Environmental Studies<br></p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/YSwJhxKt/Screenshot-2025-03-31-143430.png" alt="Araseen Kalikisian">
+                <p>Araseen Kalikisian<br>Geotechnical Site Evaluation Expert<br></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId, button) {
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => section.classList.remove('active'));
+            const buttons = document.querySelectorAll('.section-button');
+            buttons.forEach(btn => btn.classList.remove('toggled'));
+
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+                button.classList.add('toggled');
+            }
+        }
+
+        function toggleArabicSection(sectionId, button) {
+            const sections = document.querySelectorAll('.arabic-content');
+            sections.forEach(section => section.classList.remove('active'));
+            const buttons = document.querySelectorAll('.section-button');
+            buttons.forEach(btn => btn.classList.remove('toggled'));
+
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+                button.classList.add('toggled');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const englishButtons = document.querySelectorAll('.about-container:first-child .section-button');
+            if (englishButtons.length > 0) {
+                toggleSection('about', englishButtons[0]); // Show English About Us by default and toggle the button
+            }
+
+            const arabicButtons = document.querySelectorAll('.about-container:nth-child(2) .section-button');
+            if (arabicButtons.length > 0) {
+                toggleArabicSection('arabic-about', arabicButtons[0]); // Show Arabic من نحن by default and toggle the button
+            }
+        });
+    </script>
+</body>
+</html>
+
